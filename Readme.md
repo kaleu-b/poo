@@ -1,3 +1,6 @@
+
+![GitHub License](https://img.shields.io/github/license/kaleu-b/poo)
+
 # Atividades Práticas da disciplina de Programação Orientada a Objetos (POO)
 
 > Esse repositório contém as atividades práticas desenvolvidas durante as aulas da disciplina de Programação Orientada a objetos.
