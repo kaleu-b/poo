@@ -37,4 +37,6 @@ git config −−global credential.helper 'cache −−timeout=3600'
 
 A diferença principal entre o git merge e o git rebase é que o merge preserva o histórico original, e cria um commit novo de merge, que une os dois ramos. A principal vantagem é que ele preserva o histórico de commits original de ambas as branches, e é uma opção segura. A desvantagem é que ele pode aumentar a complexidade do histórico de commits, por gerar uma mensagem de commit de merge.
 
-Enquanto isso, o git rebase move todos os commits de uma branch para a ponta da outra branch 
+Enquanto isso, o git rebase move todos os commits de uma branch para a ponta da outra branch, gerando hashes de commit novos.
+
+Geralmente, o merge é recomendado para unir as branches quando se trabalha em time, e o rebase em mudanças locais.
