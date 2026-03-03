@@ -9,13 +9,15 @@ import java.util.Random;
 public class Main {
     static void main() {
         Random r = new Random();
+        int numTentativas = 0;
         int input = -1;
-        int numero = r.nextInt(100);
+        int min = 1;
+        int max = 100;
+        int numero = r.nextInt(max - min + 1) + min;
         List<Integer> tentativas = new ArrayList<>();
         do {
             try {
                 input = Integer.parseInt(IO.readln("Digite um numero entre 1 e 100: "));
-
                 if (input < numero) {
                     IO.println("É maior");
                 } else if (input > numero) {
@@ -24,12 +26,14 @@ public class Main {
                 tentativas.add(input);
                 IO.print("Tentativas: ");
                 IO.println(tentativas);
-
+                ++numTentativas;
             } catch (NumberFormatException e) {
                 IO.println("Erro, digite um numero.");
             }
 
         } while (input != numero);
-        System.out.println("Parabéns!!!!!!!!!!!!! Adivinhou!");
+        IO.println("Parabéns!!!!!!!!!!!!! Adivinhou!");
+        IO.print("Tentativas: " + numTentativas + ": " + tentativas);
+        
     }
 }
