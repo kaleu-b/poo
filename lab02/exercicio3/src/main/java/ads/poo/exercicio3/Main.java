@@ -6,23 +6,28 @@ public class Main {
         int largura;
 
 
-            if (args.length == 0) {
-                IO.println("Argumentos vazios. Sayonara");
-            } else if (args[0].equals("losango")) {
-                altura = Integer.parseInt(args[1]);
-                losango(altura);
-            } else if (args[0].equals("triangulo")) {
-                altura = Integer.parseInt(args[1]);
-                triangulo(altura);
-            } else if (args[0].equals("retangulo")) {
-                altura = Integer.parseInt(args[1]);
-                largura = Integer.parseInt(args[1]);
-                retangulo(altura, largura);
-            }
+        if (args.length == 0) {
+            IO.println("Argumentos vazios. Sayonara");
+        } else if (args[0].equals("losango")) {
+            altura = Integer.parseInt(args[1]);
+            losango(altura);
+        } else if (args[0].equals("triangulo")) {
+            altura = Integer.parseInt(args[1]);
+            triangulo(altura);
+        } else if (args[0].equals("retangulo")) {
+            altura = Integer.parseInt(args[1]);
+            largura = Integer.parseInt(args[1]);
+            retangulo(altura, largura);
         }
     }
+
     public static void triangulo(int altura) {
-        IO.println("isso será um triangulo maneiro no futuro :)");
+        for (int i = 0; i < altura; i++) {
+            for (int j = 0; j < i; j++) {
+                IO.print("*");
+            }
+            IO.println();
+        }
     }
 
     public static void losango(int altura) {
