@@ -7,6 +7,7 @@ public class Main {
 
         if (args.length == 0) {
             IO.println("Argumentos vazios. Sayonara");
+            return;
         } else if ((args[0].equals("losango") || args[0].equals("triangulo") || args[0].equals("retangulo")) && args.length < 2) {
             IO.println("Valor para altura vazio. Favor");
             return;
@@ -29,6 +30,7 @@ public class Main {
                     largura = Integer.parseInt(args[2]);
                     retangulo(altura, largura);
                 }
+                default -> IO.println("Opção inválida.");
             }
         } catch (NumberFormatException e) {
             IO.println("Valores inválidos, favor digitar numeros.");
