@@ -22,7 +22,7 @@ public class Main {
 
     public static void triangulo(int altura) {
         for (int i = 0; i < altura; i++) {
-            for (int j = 0; j < i; j++) {
+            for (int j = 0; j <= i; j++) {
                 IO.print("*");
             }
             IO.println();
