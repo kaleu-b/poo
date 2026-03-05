@@ -7,19 +7,33 @@ public class Main {
 
         if (args.length == 0) {
             IO.println("Argumentos vazios. Sayonara");
-        } else if (args[0].equals("losango")) {
-            altura = Integer.parseInt(args[1]);
-            losango(altura);
-        } else if (args[0].equals("triangulo")) {
-            altura = Integer.parseInt(args[1]);
-            triangulo(altura);
-        } else if (args[0].equals("retangulo")) {
-            altura = Integer.parseInt(args[1]);
-            largura = Integer.parseInt(args[2]);
-            retangulo(altura, largura);
+        } else if ((args[0].equals("losango") || args[0].equals("triangulo") || args[0].equals("retangulo")) && args.length < 2) {
+            IO.println("Valor para altura vazio. Favor");
+            return;
+        } else if (args[0].equals("retangulo") && args.length < 3) {
+            IO.println("Valor para largura vazio. Favor entrar com o valor para largura.");
+            return;
+        }
+        try {
+            switch (args[0]) {
+                case "losango" -> {
+                    altura = Integer.parseInt(args[1]);
+                    losango(altura);
+                }
+                case "triangulo" -> {
+                    altura = Integer.parseInt(args[1]);
+                    triangulo(altura);
+                }
+                case "retangulo" -> {
+                    altura = Integer.parseInt(args[1]);
+                    largura = Integer.parseInt(args[2]);
+                    retangulo(altura, largura);
+                }
+            }
+        } catch (NumberFormatException e) {
+            IO.println("Valores inválidos, favor digitar numeros.");
         }
     }
-
     public static void triangulo(int altura) {
         for (int i = 0; i < altura; i++) {
             for (int j = 0; j <= i; j++) {
