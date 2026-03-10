@@ -2,15 +2,17 @@ package ads.poo;
 
 public class Main {
     static void main() {
-    Lampada a = new Lampada();
-    a.interruptor();
+        Caneta bic = new Caneta();
 
-    Lampada b = new Lampada();
+        bic.setCor("Rosa choque");
+        bic.setNivelTinta(0.01);
+        String cor = bic.getCor();
+        bic.abreTampa();
+        IO.println( bic.desenhar(1, 1, 2, 1));
+        IO.println("Tinta restante: " + bic.getNivelTinta());
 
-    IO.println(a.estaLigado());
-    IO.println(b.estaLigado());
-
+        bic.fecharTampa();
+        IO.println( bic.desenhar(1, 1, 2, 2));
+        IO.println("Tinta restante: " + bic.getNivelTinta());
     }
-
-
 }
