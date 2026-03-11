@@ -36,19 +36,21 @@ public class Caneta {
    }
 
    public String desenhar( int x1, int y1, int x2, int y2){
-       //calc. distancia
-        double distancia = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
-
-        if (isAberta() && !(distancia * 0.1 > nivelTinta) ) {
-            // debitar o nivel da tinta
-            nivelTinta -= distancia * 0.01;
-            // retorna distancia percorrida
-            return String.format("desenhei %.2fcm na cor %s", distancia, cor);
-            // ex: desenhei 1cm na cor azul
-        }else  if (!isAberta()){
-            return "caneta fechada, não dá pra desenhar :(";
-        }else{
-            return "tinta insuficiente :((";
+        if (aberta){
+            //calcula distancia
+            double distancia = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+            //calcula consumo (0.10% por cm desenhado)
+            double consumo = distancia * 0.1
+               if (nivelTinta >= consumo){
+                   //debita o nivel da tinta
+                   nivelTinta -= consumo;
+                   //retorna os cm desenhados
+                   return String.format("desenhei %.2fcm na cor %s", distancia, cor);
+               }
+            //se não tem tinta, retorna essa mensagem
+            return "tinta insuficiente";
         }
+        //se a caneta não estiver aberta, retorna essa mensagem
+        return "caneta está fechada, abra ela!";
     }
 }
