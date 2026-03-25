@@ -3,7 +3,7 @@ package poo.ads;
 public class Horario {
     private short hora, minuto, segundo;
 
-    private final static short MAX_HORA = 24;
+    private final static short MAX_HORA = 23;
     private final static short MAX_MINUTO = 59;
     private final static short MAX_SEGUNDO = 59;
     private final static short MIN_VALOR = 0;
@@ -92,13 +92,39 @@ public class Horario {
         return String.format("%02d:%02d:%02d", hora, minuto, segundo);
     }
 
-    public String toExtenso(){
-        String mEx, hEx, sEx;
-        switch (this.hora) {
-            case
-        }
+    //especificamente para horas
+    private String isFeminino(int num){
+        return (num == 2) ? "duas" : numeroPorExtenso(num);
+    }
 
-        return hEx + mEx + sEx;
+    private String numeroPorExtenso(int num) {
+        String[] unidades = {"zero", "um", "dois", "três", "quatro", "cinco",
+                "seis", "sete", "oito", "nove", "dez", "onze",
+                "doze", "treze", "quatorze", "quinze",
+                "dezesseis", "dezessete", "dezoito", "dezenove"};
+
+        String[] dezenas = {"", "", "vinte", "trinta", "quarenta", "cinquenta"};
+
+        if (num < 20) {
+            return unidades[num];
+        } else {
+            int dez = num / 10;
+            int uni = num % 10;
+
+            if (uni == 0) {
+                return dezenas[dez];
+            } else {
+                return dezenas[dez] + " e " + unidades[uni];
+            }
+        }
+    }
+
+    public String toExtenso() {
+        String hEx = isFeminino(this.hora) + " hora" + (this.hora != 1 ? "s" : "");
+        String mEx = numeroPorExtenso(this.minuto) + " minuto" + (this.minuto != 1 ? "s" : "");
+        String sEx = numeroPorExtenso(this.segundo) + " segundo" + (this.segundo != 1 ? "s" : "");
+
+        return hEx + ", " + mEx + " e " + sEx;
     }
 
 }
