@@ -14,6 +14,6 @@ public class Main {
 
         IO.println(r2.getNome());
 
-        IO.println(r.getQtdeRobos());
+        IO.println(Robo.getQtdeRobos());
     }
 }
