@@ -21,7 +21,7 @@ public class Retangulo {
     public Retangulo(int largura, int altura, String cod) {
         this();
         // se a altura e largura não forem valores inválidos
-        if (!(altura <= MIN) && !(largura <= MIN)) {
+        if (isValido(altura) && isValido(largura)) {
             this.altura = altura;
             this.largura = largura;
         }
@@ -45,8 +45,8 @@ public class Retangulo {
         return cod;
     }
     // verifica se os valores são maiores que 0 e retorna um booleano
-    private boolean isValido(int valor) {
-        return valor > 0;
+    private static boolean isValido(int valor) {
+        return valor > MIN;
     }
     // muda o valor do atributo se for um valor válido
     // e retorna uma booleana
