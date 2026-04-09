@@ -38,7 +38,13 @@ public class App {
 
         for (Conta c : contas) {
             if (c.isValido(procura)) {
+                var saldoAnterior = c.getSaldo();
                 c.depositar(v);
+                if (c.getSaldo() == saldoAnterior){
+                    IO.println("Não foi possível realizar o deposito.");
+                }else {
+                    IO.println(String.format("Depósito realizado. %.2f -> %.2f", saldoAnterior, c.getSaldo()));
+                }
                 return;
             }
         }
@@ -54,9 +60,9 @@ public class App {
             if (c.isValido(procura)) {
                 c.sacar(v);
                 if (c.getSaldo() == saldoAnterior){
-                    IO.println("Não foi possível realizar o depósito.");
+                    IO.println("Não foi possível realizar o saque.");
                 }else {
-                    IO.println(String.format("Depósito realiado. %.2f -> %.2f", saldoAnterior, c.getSaldo()));
+                    IO.println(String.format("Saque realizado. %.2f -> %.2f", saldoAnterior, c.getSaldo()));
                 }
                 return;
             }
