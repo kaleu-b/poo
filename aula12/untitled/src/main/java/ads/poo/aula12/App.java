@@ -74,12 +74,13 @@ public class App {
         App app = new App();
         int opcao;
         do {
-            IO.println("..:: Menu ::..\n"
-                    + "1 - cadastrar conta\n"
-                    + "2 - listar todas as contas\n"
-                    + "3 - depositar em uma conta\n"
-                    + "4 - sacar em uma conta\n"
-                    + "5 - sair");
+            IO.println("""
+                    ..:: Menu ::..
+                    1 - cadastrar conta
+                    2 - listar todas as contas
+                    3 - depositar em uma conta
+                    4 - sacar em uma conta
+                    5 - sair""");
             opcao = Integer.parseInt(IO.readln("Entre com uma opcao: "));
             app.menu(opcao);
         } while (opcao != 5);
