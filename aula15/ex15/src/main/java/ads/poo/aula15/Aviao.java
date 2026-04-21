@@ -3,7 +3,6 @@ package ads.poo.aula15;
 import java.util.ArrayList;
 
 public class Aviao {
-
     private int tripulantes;
     private int passageiros;
     private int qtdCombustivel;
