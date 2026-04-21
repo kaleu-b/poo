@@ -4,7 +4,7 @@ public class Motor {
     private final String tipoMotor;
     private boolean ligado;
 
-    // Constantes movidas para cá
+    // constante que indica os tipos de motores
     private static final String[] TIPO_MOTOR = {"Turbina", "Hélice"};
 
     public Motor(String tipo) {
