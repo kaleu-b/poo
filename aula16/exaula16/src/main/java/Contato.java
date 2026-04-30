@@ -67,8 +67,8 @@ public class Contato {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append(this.getNome());
-        sb.append("" + this.getSobrenome());
-        sb.append("/n");
+        sb.append(" " + this.getSobrenome());
+        sb.append("\n");
         sb.append("Telefones:\n");
         sb.append(telefones.toString() + "\n");
         sb.append("Emails: \n");

@@ -15,7 +15,7 @@ public class Agenda {
     public ArrayList<Contato> findContato(String nome, String sobrenome){
        ArrayList<Contato> resultado = new ArrayList<>();
         for (Contato c: contatos){
-           if(c.getNome().equalsIgnoreCase(nome) && c.getNome().equalsIgnoreCase(sobrenome)){
+           if(c.getNome().equalsIgnoreCase(nome) && c.getSobrenome().equalsIgnoreCase(sobrenome)){
                 resultado.add(c);
            }
        }
@@ -56,8 +56,9 @@ public class Agenda {
 
     public String toString(){
         StringBuilder sb = new StringBuilder();
+        sb.append("---------Contatos----------------");
+        sb.append("\n");
         contatos.forEach(e -> {
-            sb.append("---------Contatos----------------");
             sb.append(e.toString());
         });
         return sb.toString();
