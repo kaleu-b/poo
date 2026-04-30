@@ -1,8 +1,7 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Agenda {
-    ArrayList<Contato> contatos;
+    private ArrayList<Contato> contatos;
 
     public Agenda(){
         contatos = new ArrayList<>();
@@ -13,4 +12,54 @@ public class Agenda {
         return true;
     }
 
+    public ArrayList<Contato> findContato(String nome, String sobrenome){
+       ArrayList<Contato> resultado = new ArrayList<>();
+        for (Contato c: contatos){
+           if(c.getNome().equalsIgnoreCase(nome) && c.getNome().equalsIgnoreCase(sobrenome)){
+                resultado.add(c);
+           }
+       }
+        return resultado;
+    }
+
+    public boolean removeContato(int index){
+        if ( contatos.get(index) != null ){
+            contatos.remove(index);
+            return true;
+        }
+        return false;
+    }
+
+    public boolean addTelefone(String rotulo, String valor, int indice){
+           return contatos.get(indice).addTelefone(rotulo, valor);
+    }
+
+    public boolean addEmail(String rotulo, String valor, int indice){
+        return contatos.get(indice).addEmail(rotulo, valor);
+    }
+
+    public boolean updateTelefone(String rotulo, String valor, int indice){
+        return contatos.get(indice).updateTelefone(rotulo, valor);
+    }
+
+    public boolean updateEmail(String rotulo, String valor, int indice){
+        return contatos.get(indice).updateEmail(rotulo, valor);
+    }
+
+    public boolean removeTelefone(String rotulo, int indice){
+        return contatos.get(indice).removeTelefone(rotulo);
+    }
+
+    public boolean removeEmail(String rotulo, int indice){
+        return contatos.get(indice).removeEmail(rotulo);
+    }
+
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+        contatos.forEach(e -> {
+            sb.append("---------Contatos----------------");
+            sb.append(e.toString());
+        });
+        return sb.toString();
+    }
 }

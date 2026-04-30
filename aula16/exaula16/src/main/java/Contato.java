@@ -40,4 +40,40 @@ public class Contato {
         return this.emails.remove(rotulo);
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getSobrenome() {
+        return sobrenome;
+    }
+
+    public void setSobrenome(String sobrenome) {
+        this.sobrenome = sobrenome;
+    }
+
+    public LocalDate getDataNasc() {
+        return dataNasc;
+    }
+
+    public void setDataNasc(LocalDate dataNasc) {
+        this.dataNasc = dataNasc;
+    }
+
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(this.getNome());
+        sb.append("" + this.getSobrenome());
+        sb.append("/n");
+        sb.append("Telefones:\n");
+        sb.append(telefones.toString() + "\n");
+        sb.append("Emails: \n");
+        sb.append(emails.toString());
+
+        return sb.toString();
+    }
 }

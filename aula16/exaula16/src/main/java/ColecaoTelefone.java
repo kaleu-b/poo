@@ -5,7 +5,7 @@ public class ColecaoTelefone {
     // hashmap com os dados de telefone(s) do contato
     private HashMap<String, String> dados;
     // template que verifica se um telefone é valido usado regex
-    private static final String telefoneRegex = "^[0-9]+${11}";
+    //private static final String telefoneRegex = "^[0-9]+${11}";
 
     // construtor que inicia o hashmap vazio
     public ColecaoTelefone() {
@@ -14,12 +14,12 @@ public class ColecaoTelefone {
 
     // adiciona o numero de telefone caso ele não exista e caso seja um número válido
     public boolean add(String rotulo, String valor) {
-        if (validaTelefone(valor)) {
+
             if (!dados.containsKey(rotulo)) {
                 dados.put(rotulo, valor);
                 return true;
             }
-        }
+
         return false;
     }
 
@@ -35,18 +35,16 @@ public class ColecaoTelefone {
     // atualiza um numero caso ele exista no mapa e se o numero novo for valido
     public boolean update(String rotulo, String valor) {
         if (dados.containsKey(rotulo)) {
-            if (validaTelefone(valor)) {
                 dados.replace(rotulo, valor);
                 return true;
-            }
         }
         return false;
     }
 
-    // valida o numero de telefone (11 caracteres, somente numeros)
+    /* valida o numero de telefone (11 caracteres, somente numeros)
     private boolean validaTelefone(String e) {
         return e.matches(telefoneRegex);
-    }
+    }*/
 
     // mostra os numeros em uma coleção junto com os rotulos
     // TODO: mostrar o rótulo e o número
