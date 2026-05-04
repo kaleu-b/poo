@@ -18,9 +18,9 @@
         
     }
     
-    Filme "1..*" o-- "1..*" Ator
+    Filme "1..*" -- "0..*" Ator
     Filme "1" *-- "0..*" Avaliacao
-    Usuario "1" *-- "0..*" Avaliacao
+    Usuario "1" o-- "0..*" Avaliacao
 ```
 
 um filme pode ter um ou mais atores, mas um filme não necessariamente precisa de atores pra existir. o contrário também é verdade.

@@ -1,40 +1,41 @@
-# Modelo UML da questão 1
-
 ```mermaid
-    classDiagram
-    direction LR
-
+classDiagram
+    direction TB
+    
     class Produto{
-     - nome:String   
-     - descricao:String
-     - preco:float
-     - quantidade: int
-     + Produto(descricao:String, preco:float, quantidade:int)
-    }
- 
-    class Cliente{
-    -nome:String
-    -email:String
-    -enderecos:HashMap<String, String>
-    }
- 
-    class Pedido{
-    - dataPedido:LocalDate
-    - situacao:String
-    - produtos:ArrayList~Produto~
-    + Pedido(dt:LocalDate, situacao:String, p:ArrayList<Produto>)
+        -descricao:String
+        -nome:String
+        -preco:float
+        -quantidade:int
     }
     
-    Pedido "1..*" *-- "1" Cliente
-    Pedido "1" o-- "1..*" Produto
+    class Cliente{
+        -nome:String
+        -sobrenome:String
+        -email:String
+        -enderecos:HashMap~String, Endereco~
+    }
+    
+    class Endereco{
+        -endereco:String
+        -complemento:String
+    }
+    
+    class ItemPedido{
+        -quantidade:int
+        -produto:Produto
+        +valorTotal()float
+    }
+    
+    class Pedido{
+        -data:LocalDate
+        -situacao:String
+        -itens:ArrayList~ItemPedido~
+        +calcularTotal()float
+    }
+    
+    Pedido "1..*" <-- "1" Cliente:associação
+    Produto "1..*" --> "1" ItemPedido:associação
+    ItemPedido "1..*" --* "1" Pedido:agregação
+    Cliente "1" *-- "1..*" Endereco:composição
 ```
-#### placeholder class app (pode ou não ser adicionada depois)
-``` 
-class App{
-- produtos:HashMap<String, Produto>    
-+ addProduto(p:Produto, nome:String)
-+ rmProduto(chave:String)
-+ addEstoque(qtde:int, chave:String)
-+ rmEstoque(qtde:int, chave:String)
-}
-```    
