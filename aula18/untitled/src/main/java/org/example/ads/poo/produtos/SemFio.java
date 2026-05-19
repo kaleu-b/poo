@@ -12,7 +12,13 @@ public class SemFio extends Telefone{
         this.distanciaOperacao = distanciaOperacao;
     }
 
-    @Override
+    public double getFrequencia() {
+    return frequencia;
+}public int getCanais() {
+    return canais;
+}public double getDistanciaOperacao() {
+    return distanciaOperacao;
+}@Override
     public String toString() {
         return super.toString()
                 +"codigo: " + this.codigo
