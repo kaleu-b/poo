@@ -1,4 +1,4 @@
-package org.example.Personagens;
+package org.example.personagens;
 
 public class Arqueiro extends Personagem implements Guerreiro{
 

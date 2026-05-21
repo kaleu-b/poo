@@ -1,4 +1,4 @@
-package org.example.Personagens;
+package org.example.personagens;
 // exemplo de uso de interfaces:
 public interface Guerreiro {
 

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="30ba1198-ae2c-4ddd-a003-00c062a5b3e9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../aula18/ex_JE/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../aula18/ex_JE/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula18/ex_JE/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../aula18/ex_JE/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula18/ex_JE/src/main/java/org/example/Personagens/Aldeao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../aula18/ex_JE/src/main/java/org/example/personagens/Aldeao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula18/ex_JE/src/main/java/org/example/Personagens/Arqueiro.java" beforeDir="false" afterPath="$PROJECT_DIR$/../aula18/ex_JE/src/main/java/org/example/personagens/Arqueiro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula18/ex_JE/src/main/java/org/example/Personagens/Cavaleiro.java" beforeDir="false" afterPath="$PROJECT_DIR$/../aula18/ex_JE/src/main/java/org/example/personagens/Cavaleiro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula18/ex_JE/src/main/java/org/example/Personagens/Coletador.java" beforeDir="false" afterPath="$PROJECT_DIR$/../aula18/ex_JE/src/main/java/org/example/personagens/Coletador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula18/ex_JE/src/main/java/org/example/Personagens/Guerreiro.java" beforeDir="false" afterPath="$PROJECT_DIR$/../aula18/ex_JE/src/main/java/org/example/personagens/Guerreiro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula18/ex_JE/src/main/java/org/example/Personagens/Personagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../aula18/ex_JE/src/main/java/org/example/personagens/Personagem.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="3E3LbxMe28b20PTO0GvvhFFcdst" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/aluno/poo/lab06",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-26cb7f24e5b0-intellij.indexing.shared.core-IU-253.29346.138" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.29346.138" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="30ba1198-ae2c-4ddd-a003-00c062a5b3e9" name="Changes" comment="" />
+      <created>1779402382014</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1779402382014</updated>
+      <workItem from="1779402383296" duration="130000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

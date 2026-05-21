@@ -1,6 +1,6 @@
 package org.example;
 
-import org.example.Personagens.*;
+import org.example.personagens.*;
 
 public class Main {
     static void main() {
@@ -15,6 +15,12 @@ public class Main {
             if (aux instanceof Guerreiro g) {
                 IO.println(g.atacar());
             }
+
+            if (aux instanceof Aldeao al){
+                IO.println(al.coletarMadeira());
+                IO.println(al.coletarOuro());
+            }
+
             IO.println(aux.mover());
         }
     }

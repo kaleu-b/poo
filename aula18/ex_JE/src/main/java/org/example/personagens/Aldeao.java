@@ -1,4 +1,4 @@
-package org.example.Personagens;
+package org.example.personagens;
 
 public class Aldeao extends Personagem implements Guerreiro,Coletador{
 
