@@ -29,18 +29,8 @@ public abstract class Personagem {
     protected void setVelocidade(double velocidade) {
         this.velocidade = velocidade;
     }
-/* métodos concretos
-    public String atacar(){
-        return "Estou atacando!";
-    }
-
-    public String mover(){
-        return "Estou me movendo!";
-    }
-*/
 
     public abstract String mover();
-   // public abstract String atacar(){}
 
     public Personagem(int vida, int ataque, double velocidade) {
         this.vida = vida;
