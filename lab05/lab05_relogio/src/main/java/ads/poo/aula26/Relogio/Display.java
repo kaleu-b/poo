@@ -1,13 +1,14 @@
 package ads.poo.aula26.Relogio;
 
 import java.util.HashMap;
+import edu.princeton.cs.algs4.Draw;
 
 public class Display {
 
     private HashMap<Character, Segmento> segmentos;
 
     public Display() {
-        segmentos = new HashMap<>();  // estava faltando isso!
+        segmentos = new HashMap<>();
         segmentos.put('a', new Segmento());
         segmentos.put('b', new Segmento());
         segmentos.put('c', new Segmento());
