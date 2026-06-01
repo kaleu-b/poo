@@ -11,9 +11,9 @@ public class Relogio {
     private static int MAX_HORA = 24;
 
     public Relogio(int hora, int minutos, int segundos) {
-        this.hora = (validaHora(hora)) ? hora:0;
-        this.minutos = (validaMinuto(minutos)) ? minutos:0;
-        this.segundos = (validaSegundo(segundos)) ? segundos:0;
+        this.hora = !(transbordou(hora, MAX_HORA) || estaNegativo(hora)) ? hora:0;
+        this.minutos = !(transbordou(minutos, MAX_MINUTO) || estaNegativo(minutos)) ? minutos:0;
+        this.segundos = !(transbordou(segundos, MAX_SEGUNDO) || estaNegativo(segundos)) ? segundos:0;
     }
 
     protected void checkTempo(){
@@ -23,37 +23,33 @@ public class Relogio {
     }
 
     protected void checkSegundo(){
-        if(validaSegundo(this.segundos)){
+        if(transbordou(segundos, MAX_SEGUNDO)){
             segundos = 0;
             minutos++;
         }
     }
 
-    public void checkMinuto(){
-        if(validaMinuto(this.minutos)){
+    protected void checkMinuto(){
+        if(transbordou(minutos, MAX_MINUTO)){
             minutos = 0;
             hora++;
         }
     }
 
-    public void checkHora(){
-        if (validaHora(this.hora)){
+    protected void checkHora(){
+        if (transbordou(hora, MAX_HORA)){
             hora = 0;
             minutos = 0;
             segundos = 0;
         }
     }
 
-    protected boolean validaHora(int valorHora){
-        return valorHora >= MAX_HORA;
-    }
+   protected boolean estaNegativo(int valorTempo){
+        return valorTempo < 0;
+   }
 
-    protected boolean validaMinuto(int valorMinuto){
-        return valorMinuto >= MAX_MINUTO;
-    }
-
-    protected boolean validaSegundo(int valorSegundo){
-        return valorSegundo >= MAX_SEGUNDO;
+    protected boolean transbordou(int valorTempo, int max){
+        return valorTempo >= max;
     }
 
     protected void incrementar(){
