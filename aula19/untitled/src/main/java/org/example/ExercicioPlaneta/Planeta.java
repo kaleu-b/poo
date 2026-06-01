@@ -15,5 +15,13 @@ public enum Planeta {
         this.nome = nome;
     }
 
+    public static Planeta getByCodigo(int codigo){
+        for(Planeta p : Planeta.values()){
+            if (p.codigo == codigo){
+                return p;
+            }
+        }
+        throw new IllegalArgumentException("Código inválido. Tente novamente.");
+    }
 
 }
