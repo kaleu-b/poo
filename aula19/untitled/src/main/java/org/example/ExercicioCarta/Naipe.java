@@ -15,4 +15,17 @@ public enum Naipe {
         this.nome = nome;
     }
 
+    public static Naipe getByCodigo(int codigo){
+        for (Naipe n : Naipe.values()){
+            if (n.valor == codigo){
+            return n;
+            }
+        }
+        throw new IllegalArgumentException("Codigo invalido. Tente novamente :((");
+    }
+
+    @Override
+    public String toString() {
+        return "de" + this.nome;
+    }
 }

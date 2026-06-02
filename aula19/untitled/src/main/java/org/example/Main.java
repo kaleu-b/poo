@@ -2,6 +2,7 @@ package org.example;
 
 import org.example.Classe.DiaSemana;
 import org.example.Classe.Disciplina;
+import org.example.ExercicioCarta.Baralho;
 
 import java.sql.Array;
 
@@ -24,5 +25,8 @@ public class Main {
 
         Disciplina disciplina1 = new Disciplina(sigla, disciplina, new DiaSemana[]{primeiro, segundo});
         IO.print(disciplina1.toString());
+
+        Baralho baralho = new Baralho();
+        IO.println(baralho.toString());
     }
 }

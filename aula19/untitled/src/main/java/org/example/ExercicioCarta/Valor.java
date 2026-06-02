@@ -2,38 +2,39 @@ package org.example.ExercicioCarta;
 
 public enum Valor {
 
-    ACE( 11, "Ás", 0),
-    UM(1, "Um", 1),
-    DOIS(2, "Dois", 2),
-    TRES(3, "Três", 3),
-    QUATRO(4, "Quatro", 4),
-    CINCO(5, "Cinco", 5),
-    SEIS(6, "Seis", 6),
-    SETE(7, "Sete", 7),
-    OITO(8, "Oito", 8),
-    NOVE(9, "Nove", 9),
-    DEZ(10, "Dez", 10),
-    VALETE(10, "Valete", 11),
-    DAMA(10, "Dama", 12),
-    REI(10,"Rei", 13);
+    ACE( 0, "Ás"),
+    DOIS(1, "Dois"),
+    TRES(2, "Três"),
+    QUATRO(3, "Quatro"),
+    CINCO(4, "Cinco"),
+    SEIS(5, "Seis"),
+    SETE(6, "Sete"),
+    OITO(7, "Oito"),
+    NOVE(8, "Nove"),
+    DEZ(9, "Dez"),
+    VALETE(10, "Valete"),
+    DAMA(11, "Dama"),
+    REI(12,"Rei");
 
-    private int valor;
-    private final String nome;
     private final int codigo;
+    private final String nome;
 
-    Valor(int v, String nome, int codigo){
-            this.valor = v;
+    Valor(int codigo, String nome){
             this.nome = nome;
             this.codigo = codigo;
     }
 
     public static Valor getByCodigo(int codigo){
         for (Valor v : Valor.values()){
-            if (v.valor == codigo){
+            if (v.codigo == codigo){
                 return v;
             }
         }
         throw new IllegalArgumentException("Codigo invalido. Tente novamente :((");
     }
 
+    @Override
+    public String toString() {
+       return this.nome;
+    }
 }
