@@ -28,9 +28,11 @@ public class Main implements DrawListener {
         // adicionar todas as cartas ao baralho
         for (Naipe naipe : Naipe.values()){
             for (Valor valor : Valor.values()) {
-                baralho.add(new CartaGrafica(naipe, valor));
+                baralho.add(new CartaGrafica(naipe, valor, 100, 300));
             }
         }
+
+        baralho.getFirst().desenhar(draw, 600, 300);
     }
 
     @Override

@@ -5,10 +5,13 @@ public class CartaGrafica extends Carta{
 
     private final String diretorio = "cartas/";
     private boolean virada; // se está ou não virada
+    private double x,y;
 
-    public CartaGrafica(Naipe naipe, Valor valor) {
+    public CartaGrafica(Naipe naipe, Valor valor, double x, double y) {
         super(naipe, valor);
         this.virada = false; // por padrão não vem virada
+        this.x = x;
+        this.y = y;
     }
 
     // c & o = vermelho, e & p = preto
@@ -26,9 +29,7 @@ public class CartaGrafica extends Carta{
     public boolean clicou(double x, double y){
         // se clicou dentro da carta: true
         // else: false
-         if (){
 
-        }
         return false;
     }
 
