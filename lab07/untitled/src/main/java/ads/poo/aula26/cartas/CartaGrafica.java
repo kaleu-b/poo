@@ -26,7 +26,7 @@ public class CartaGrafica extends Carta{
     public boolean clicou(double x, double y){
         // se clicou dentro da carta: true
         // else: false
-        if (){
+         if (){
 
         }
         return false;
