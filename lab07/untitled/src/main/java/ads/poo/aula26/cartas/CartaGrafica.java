@@ -4,18 +4,15 @@ import edu.princeton.cs.algs4.Draw;
 public class CartaGrafica extends Carta{
 
     private final String diretorio = "cartas/";
-    private double x,y;
     private boolean virada; // se está ou não virada
 
     public CartaGrafica(Naipe naipe, Valor valor) {
         super(naipe, valor);
         this.virada = false; // por padrão não vem virada
-        //this.x = x;
-        //this.y = y;
     }
 
     // c & o = vermelho, e & p = preto
-    public void desenhar (Draw d){
+    public void desenhar (Draw d, double x, double y){
         String imagem = String.format("%s%s%s.png", this.diretorio ,this.getValor(), this.getNaipe());
         try {
             d.picture(x, y, imagem);
