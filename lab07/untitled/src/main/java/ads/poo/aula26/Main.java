@@ -10,7 +10,7 @@ public class Main implements DrawListener {
     private Draw draw;
     ArrayList<CartaGrafica> baralho = new ArrayList<>();
 
-  /*  String valores = "123456789qjk";
+    /*  String valores = "123456789qjk";
     String naipes = "oecp";
     Random r = new Random();
     */
@@ -18,9 +18,9 @@ public class Main implements DrawListener {
 
         this.draw = new Draw();
         this.draw.setTitle("Jogo de cartas");
-        this.draw.setCanvasSize(1200, 600);
+        this.draw.setCanvasSize(600, 600);
         this.draw.setXscale(0, 1200);
-        this.draw.setYscale(0, 600);
+        this.draw.setYscale(0, 800);
         this.draw.setDefaultCloseOperation(3);
         this.draw.enableDoubleBuffering();
         this.draw.addListener(this);
@@ -28,22 +28,25 @@ public class Main implements DrawListener {
         // adicionar todas as cartas ao baralho
         for (Naipe naipe : Naipe.values()){
             for (Valor valor : Valor.values()) {
-                baralho.add(new CartaGrafica(naipe, valor, 100, 300));
+                baralho.add(new CartaGrafica(naipe, valor, 300, 300));
             }
         }
 
-        baralho.getFirst().desenhar(draw, 600, 300);
+
+
     }
 
     @Override
     public void mouseClicked(double x, double y) {
-        //DrawListener.super.mouseClicked(x, y);
-      /*  String carta = String.format("cartas/%c%c.png",
-                valores.charAt(r.nextInt(13)),
-                naipes.charAt(r.nextInt(4))
-        );
-        this.draw.picture(x,y, carta);
-        this.draw.show();*/
+        DrawListener.super.mouseClicked(x,y);
+        IO.println("Clique em:" + x + "," + y);
+        baralho.forEach(c ->{
+            if (c.clicou(x,y)){
+                c.virar();
+                c.desenhar(draw);
+                this.draw.show();
+            }
+        });
     }
 
     static void main() {

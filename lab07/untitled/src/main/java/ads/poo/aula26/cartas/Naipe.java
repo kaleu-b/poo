@@ -27,6 +27,10 @@ public enum Naipe {
         throw new IllegalArgumentException("Codigo invalido. Tente novamente :((");
     }
 
+    public char getInicial() {
+        return inicial;
+    }
+
     @Override
     public String toString() {
         return "de" + this.nome;

@@ -18,6 +18,10 @@ public class Carta {
         return valor;
     }
 
+    public char getInicial(){
+        return this.naipe.getInicial();
+    }
+
     public void setValor(Valor valor) {
         this.valor = valor;
     }
