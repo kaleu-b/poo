@@ -4,23 +4,26 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Dado {
-    private int face;
-    private ArrayList<Integer> est;
-    private Random r;
+    protected int face;
+    protected ArrayList<Integer> est;
+    protected Random r;
 
-    public Dado(ArrayList<Integer> est, int face) {
-        this.est = est;
-        this.face = face;
+    public Dado() {
         this.r = new Random();
+        this.est = new ArrayList<>();
+        this.face = sortear();
     }
 
-    protected void girar(){
-        face = r.nextInt(6);
+    public void girar() {
+        face = sortear();
         addEstatistica(face);
     }
 
-    protected void addEstatistica(int num){
-        est.add(num);
+    protected int sortear(){
+        return r.nextInt(7);
     }
 
+    protected void addEstatistica(int num) {
+        est.add(num);
+    }
 }

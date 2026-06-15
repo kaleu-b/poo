@@ -1,9 +1,8 @@
 package ads.poo.aula26.cartas;
 
 public class Carta {
-
-    private Naipe naipe;
-    private Valor valor;
+    private final Naipe naipe;
+    private final Valor valor;
 
     public Carta(Naipe naipe, Valor valor) {
         this.naipe = naipe;
@@ -18,17 +17,12 @@ public class Carta {
         return valor;
     }
 
-    public char getInicial(){
+    public char getInicial() {
         return this.naipe.getInicial();
-    }
-
-    public void setValor(Valor valor) {
-        this.valor = valor;
     }
 
     @Override
     public String toString() {
         return naipe.toString() + valor.toString();
     }
-
 }

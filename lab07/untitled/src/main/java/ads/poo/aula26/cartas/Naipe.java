@@ -1,8 +1,6 @@
 package ads.poo.aula26.cartas;
 
 public enum Naipe {
-
-
     PAUS(0, "Paus", 'p'),
     OURO(1, "Ouro", 'o'),
     COPAS(2, "Copas", 'c'),
@@ -12,15 +10,15 @@ public enum Naipe {
     private final String nome;
     private final char inicial;
 
-    Naipe(int valor, String nome, char inicial){
+    Naipe(int valor, String nome, char inicial) {
         this.valor = valor;
         this.nome = nome;
         this.inicial = inicial;
     }
 
-    public static Naipe getByCodigo(int codigo){
-        for (Naipe n : Naipe.values()){
-            if (n.valor == codigo){
+    public static Naipe getByCodigo(int codigo) {
+        for (Naipe n : Naipe.values()) {
+            if (n.valor == codigo) {
                 return n;
             }
         }
@@ -35,5 +33,4 @@ public enum Naipe {
     public String toString() {
         return "de" + this.nome;
     }
-
 }
