@@ -9,13 +9,13 @@ import edu.princeton.cs.algs4.DrawListener;
 import java.util.ArrayList;
 
 public class Main implements DrawListener {
-    private Draw draw;
+    private final Draw draw;
     ArrayList<ObjDesenho> baralho = new ArrayList<>();
 
     public Main() {
         this.draw = new Draw();
         this.draw.setTitle("Jogo de cartas");
-        this.draw.setCanvasSize(1080, 1500);
+        this.draw.setCanvasSize(1000, 1000);
         this.draw.setXscale(0, 1500);
         this.draw.setYscale(0, 1500);
         this.draw.setDefaultCloseOperation(3);

@@ -11,11 +11,12 @@ direction TB
     }
 
     class Carta {
+        -- TODO:adicionar atributos e métodos da carta
     }
 
     class CartaGrafica {
         -x,y:double
-        +desenhar(Draw d)
+        +desenhar(d: Draw)
         +clicouDentro()boolean
     }
 
@@ -25,21 +26,21 @@ direction TB
 
     class Dado {
         -face:int
-        -est:int[]
-        +jogar()
+        -est:ArrayList~Integer~
+        +girar()
     }
 
     class DadoGrafico {
         -x: double
         -y: double
-        -virado:boolean
+        +DadoGrafico(int: x, int: y)
         +desenhar(d: Draw)
         +clicouDentro(x: double, y: double) : boolean
     }
 
     class Desenho {
         <<interface>>
-        +desenhar()
+        +desenhar(d: Draw)
         +clicouDentro(x: double, y: double) : boolean
     }
 
