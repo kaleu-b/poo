@@ -44,8 +44,8 @@ direction TB
         +clicouDentro(x: double, y: double) : boolean
     }
 
-    Naipe --o Carta
-    Valor --o Carta
+    Naipe "1" --o "1" Carta
+    Valor "1" --o "1" Carta
     CartaGrafica --|> Carta
     DadoGrafico --|> Dado
     Desenho <|.. CartaGrafica
