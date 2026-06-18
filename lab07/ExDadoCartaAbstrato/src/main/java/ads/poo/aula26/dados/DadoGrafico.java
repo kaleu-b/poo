@@ -15,7 +15,7 @@ public class DadoGrafico extends ObjetoGrafico {
     }
 
     @Override
-    public boolean clicouDentro() {
+    public boolean clicouDentro(double x, double y) {
         return false;
     }
 }

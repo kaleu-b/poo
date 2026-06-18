@@ -4,10 +4,11 @@ import edu.princeton.cs.algs4.Draw;
 
 public abstract class ObjetoGrafico {
 
-    private double x, y;
-
+    protected double x, y;
+    protected String diretorio;
+    protected String imagem;
     public abstract void desenhar(Draw d);
-    public abstract boolean clicouDentro();
+    public abstract boolean clicouDentro(double x, double y);
 
     public double getX() {
         return x;

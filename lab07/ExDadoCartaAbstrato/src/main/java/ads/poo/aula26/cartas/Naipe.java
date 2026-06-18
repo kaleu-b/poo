@@ -17,6 +17,10 @@ public enum Naipe {
 
     @Override
     public String toString() {
-        return String.valueOf(this.inicial);
+        return this.nome;
+    }
+
+    public char getInicial() {
+        return inicial;
     }
 }
